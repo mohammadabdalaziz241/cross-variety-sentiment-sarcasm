@@ -4,6 +4,17 @@ An end-to-end natural language processing study of sentiment and sarcasm detecti
 
 This project investigates how linguistic variety, domain composition, code-mixing, and class imbalance affect model performance and cross-variety generalisation.
 
+
+<p align="center">
+  <img src="figures/fig06_lora_vs_roberta.jpeg"
+       alt="Comparison of RoBERTa and Gemma LoRA cross-variety transfer performance"
+       width="850">
+</p>
+
+<p align="center">
+  <em>Cross-variety sarcasm-transfer comparison between RoBERTa and Gemma-2-2B with LoRA.</em>
+</p>
+
 ## Project Overview
 
 The project uses the BESSTIE-CW-26 dataset, containing text from three English varieties:
