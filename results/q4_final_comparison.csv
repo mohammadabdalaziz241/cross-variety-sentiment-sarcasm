@@ -1,0 +1,8 @@
+q4_id,true_label,text_preview,adapter_pred,zeroshot_pred,fewshot_pred,adapter_correct,zeroshot_correct,fewshot_correct
+2,1,"I used to watch Jordan shanks but he retire from journalism this year, i usually…",0,0,1,False,False,True
+3,1,I really just have anecdotes to add. But I've noticed there have been **a lot** …,0,0,1,False,False,True
+4,1,"Disappointing service. Initially pre booked over a week prior, was on time but r…",0,1,1,False,True,True
+6,0,"Lets be clear - calling out actual racism is not divisive, it is pointing out ac…",1,-1,1,False,False,False
+8,0,"Aren't they supposed to talk? 
+And that Philippine president is just looking for…",1,0,1,False,True,False
+10,0,"As much as I agree with Samaras, I think ultimately that Perrett saying that *""g…",1,0,1,False,True,False

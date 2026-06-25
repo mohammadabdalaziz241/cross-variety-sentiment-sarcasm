@@ -1,0 +1,68 @@
+[
+  {
+    "q4_id": 2,
+    "text_preview": "I used to watch Jordan shanks but he retire from journalism this year, i usually\u2026",
+    "true_label": 1,
+    "adapter_pred": 0,
+    "fewshot_gen": "Sarcastic\nReasoning:The speaker is not",
+    "fewshot_pred": 1,
+    "adapter_correct": false,
+    "fewshot_correct": true,
+    "parse_ok": true
+  },
+  {
+    "q4_id": 3,
+    "text_preview": "I really just have anecdotes to add. But I've noticed there have been **a lot** \u2026",
+    "true_label": 1,
+    "adapter_pred": 0,
+    "fewshot_gen": "Sarcastic\nReasoning:The speaker is not",
+    "fewshot_pred": 1,
+    "adapter_correct": false,
+    "fewshot_correct": true,
+    "parse_ok": true
+  },
+  {
+    "q4_id": 4,
+    "text_preview": "Disappointing service. Initially pre booked over a week prior, was on time but r\u2026",
+    "true_label": 1,
+    "adapter_pred": 0,
+    "fewshot_gen": "Sarcastic\nReasoning:The speaker is not",
+    "fewshot_pred": 1,
+    "adapter_correct": false,
+    "fewshot_correct": true,
+    "parse_ok": true
+  },
+  {
+    "q4_id": 6,
+    "text_preview": "Lets be clear - calling out actual racism is not divisive, it is pointing out ac\u2026",
+    "true_label": 0,
+    "adapter_pred": 1,
+    "fewshot_gen": "Sarcastic\nReasoning:The speaker is mocking",
+    "fewshot_pred": 1,
+    "adapter_correct": false,
+    "fewshot_correct": false,
+    "parse_ok": true
+  },
+  {
+    "q4_id": 8,
+    "text_preview": "Aren't they supposed to talk? \nAnd that Philippine president is just looking for\u2026",
+    "true_label": 0,
+    "adapter_pred": 1,
+    "fewshot_gen": "Sarcastic\nReasoning:The speaker is mocking",
+    "fewshot_pred": 1,
+    "adapter_correct": false,
+    "fewshot_correct": false,
+    "parse_ok": true
+  },
+  {
+    "q4_id": 10,
+    "text_preview": "As much as I agree with Samaras, I think ultimately that Perrett saying that *\"g\u2026",
+    "true_label": 0,
+    "adapter_pred": 1,
+    "fewshot_gen": "Sarcastic\nReasoning:The speaker is not",
+    "fewshot_pred": 1,
+    "adapter_correct": false,
+    "fewshot_correct": false,
+    "parse_ok": true
+  }
+]

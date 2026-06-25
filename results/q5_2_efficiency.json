@@ -1,0 +1,26 @@
+{
+  "n_examples": 50,
+  "n_trials": 5,
+  "n_measured": 4,
+  "metric": "median over measured trials",
+  "results": [
+    {
+      "model": "TF-IDF + LogReg",
+      "single_per_ex_ms": 0.18178215250372887,
+      "batch_per_ex_ms": 0.026859589852392673,
+      "speedup": 6.76786777097922
+    },
+    {
+      "model": "RoBERTa-base",
+      "single_per_ex_ms": 3.541691708378494,
+      "batch_per_ex_ms": 0.9226211393252015,
+      "speedup": 3.838728116471363
+    },
+    {
+      "model": "Gemma-2-2B + LoRA (4-bit)",
+      "single_per_ex_ms": 39.22887440305203,
+      "batch_per_ex_ms": 19.44371916819364,
+      "speedup": 2.0175602241377404
+    }
+  ]
+}

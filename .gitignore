@@ -1,0 +1,47 @@
+# macOS
+.DS_Store
+__MACOSX/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets and local configuration
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+
+# IDE files
+.vscode/
+.idea/
+
+# Experiment tracking
+wandb/
+mlruns/
+runs/
+
+# Model checkpoints
+checkpoints/
+models/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+
+# Temporary files
+*.log
+*.tmp
