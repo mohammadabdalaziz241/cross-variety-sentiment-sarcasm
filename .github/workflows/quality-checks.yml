@@ -1,0 +1,56 @@
+name: Quality Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check Python syntax
+        run: python -m py_compile src/app.py
+
+      - name: Validate notebook
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          notebook_path = Path("notebooks/complete_experiments.ipynb")
+
+          with notebook_path.open("r", encoding="utf-8") as file:
+              notebook = json.load(file)
+
+          code_cells = [
+              cell
+              for cell in notebook.get("cells", [])
+              if cell.get("cell_type") == "code"
+          ]
+
+          stored_outputs = sum(
+              len(cell.get("outputs", []))
+              for cell in code_cells
+          )
+
+          if stored_outputs:
+              raise SystemExit(
+                  f"Notebook contains {stored_outputs} stored output(s)."
+              )
+
+          print("Notebook is valid and contains no stored outputs.")
+          PY
