@@ -1,5 +1,9 @@
 # Cross-Variety Sentiment and Sarcasm Classification
 
+[![Quality checks](https://github.com/mohammadabdalaziz241/cross-variety-sentiment-sarcasm/actions/workflows/quality-checks.yml/badge.svg?branch=main)](https://github.com/mohammadabdalaziz241/cross-variety-sentiment-sarcasm/actions/workflows/quality-checks.yml)
+
+[Results](#key-results) · [Experiments](#running-the-experiments) · [Gradio application](#running-the-gradio-application) · [Contributions](#contributors)
+
 An end-to-end natural language processing study of sentiment and sarcasm detection across British, Australian, and Indian English using classical machine learning, transformer fine-tuning, and parameter-efficient adaptation.
 
 This project investigates how linguistic variety, domain composition, code-mixing, and class imbalance affect model performance and cross-variety generalisation.
@@ -59,6 +63,12 @@ Additional findings:
 * LoRA adapters trained only approximately 0.4% of Gemma-2-2B parameters.
 * Each trained adapter required approximately 25 MB of storage.
 * RoBERTa provided the strongest overall balance between predictive performance and inference efficiency.
+
+## From research to a deployed service
+
+The companion [Review Classifier Service](https://github.com/mohammadabdalaziz241/review-classifier-service) retrains and serves pooled RoBERTa models from this study. It adds a FastAPI interface, Docker packaging, PostgreSQL records, Terraform-managed AWS deployment, CI tests, monitoring, and load benchmarks.
+
+The research results here and the service's retraining results are reported separately. The companion repository includes training-versus-serving checks for its exact checkpoints.
 
 ## Methodology
 
@@ -178,7 +188,19 @@ python src/app.py
 
 The application loads the shared Gemma-2-2B backbone and variety-specific LoRA adapters.
 
-A compatible NVIDIA GPU is recommended.
+**The application requires an NVIDIA CUDA GPU** for its 4-bit bitsandbytes model loading. Ensure your Hugging Face environment has access to `google/gemma-2-2b` and the three adapter repositories referenced in [src/app.py](src/app.py). Model weights and adapters are downloaded separately; they are not bundled with this repository.
+
+## Validation
+
+The [quality-checks workflow](.github/workflows/quality-checks.yml) checks application syntax and confirms that the experiment notebook is valid JSON with no stored code-cell outputs.
+
+To check application syntax locally:
+
+```bash
+python -m py_compile src/app.py
+```
+
+These are lightweight repository checks. They do not run GPU inference or reproduce the reported experiment metrics.
 
 ## Figures
 
