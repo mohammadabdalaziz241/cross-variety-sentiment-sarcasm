@@ -14,12 +14,15 @@ for v in en-uk en-au en-in; do
 done
 
 SPACE="${USER_NS}/besstie-sarcasm-detector"
-echo "Creating (or reusing) Space ${SPACE}"
-hf repo create "${SPACE}" --repo-type space --space-sdk gradio --exist-ok
-
-echo "Uploading Space files"
-hf upload "${SPACE}" "${HERE}/space" . --repo-type space \
-  --commit-message "Add sarcasm detector demo"
+echo "Creating (or reusing) Space ${SPACE} and uploading files"
+SPACE="${SPACE}" SPACE_DIR="${HERE}/space" python - <<'PY'
+import os
+from huggingface_hub import create_repo, upload_folder
+repo = os.environ["SPACE"]
+create_repo(repo, repo_type="space", space_sdk="gradio", exist_ok=True)
+print(upload_folder(repo_id=repo, repo_type="space", folder_path=os.environ["SPACE_DIR"],
+                    commit_message="Add sarcasm detector demo"))
+PY
 
 echo
 echo "Done. Last step: open https://huggingface.co/spaces/${SPACE}/settings"
