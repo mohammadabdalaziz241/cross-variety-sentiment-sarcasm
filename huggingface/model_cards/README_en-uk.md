@@ -22,7 +22,7 @@ pipeline_tag: text-classification
 A 4-bit QLoRA adapter that turns [`google/gemma-2-2b`](https://huggingface.co/google/gemma-2-2b) into a binary sarcasm classifier for **British English** text (Google reviews and Reddit posts).
 It is one of three variety-specific adapters (British, Australian, Indian English) that share a single base model and can be swapped at request time.
 
-- **Try it:** [live demo Space](https://huggingface.co/spaces/Mohammadeeu20/besstie-sarcasm-detector)
+- **Try it:** run the Gradio demo locally on a CUDA GPU with `python src/app.py` from the [GitHub repo](https://github.com/mohammadabdalaziz241/cross-variety-sentiment-sarcasm#running-the-gradio-application)
 - **Code and full study:** [github.com/mohammadabdalaziz241/cross-variety-sentiment-sarcasm](https://github.com/mohammadabdalaziz241/cross-variety-sentiment-sarcasm)
 - **Sibling adapters:** [en-UK](https://huggingface.co/Mohammadeeu20/besstie-sarcasm-gemma2b-lora-en-uk) · [en-AU](https://huggingface.co/Mohammadeeu20/besstie-sarcasm-gemma2b-lora-en-au) · [en-IN](https://huggingface.co/Mohammadeeu20/besstie-sarcasm-gemma2b-lora-en-in)
 
