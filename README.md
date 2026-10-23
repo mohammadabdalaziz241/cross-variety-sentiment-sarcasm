@@ -52,7 +52,7 @@ The complete pipeline includes:
 | -------------------------------------- | -------: |
 | RoBERTa — pooled sentiment             |    0.902 |
 | RoBERTa — pooled sarcasm               |    0.709 |
-| Gemma-2-2B + LoRA — best en-AU adapter |    0.793 |
+| Gemma-2-2B + 4-bit LoRA — sarcasm, best en-AU adapter |    0.793 |
 | TF-IDF + Logistic Regression — sarcasm |    0.621 |
 
 Additional findings:
