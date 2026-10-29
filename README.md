@@ -276,3 +276,7 @@ Student identification numbers, originality declarations, signatures, submission
 
 This work was completed at the University of Surrey as part of the COMM061 Natural Language Processing module.
 
+
+## Licence
+
+Code: [Apache-2.0](LICENSE). The Gemma adapters are subject to the [Gemma Terms of Use](https://ai.google.dev/gemma/terms); roberta-base (MIT) and BESSTIE (CC BY 4.0) terms also apply. See [NOTICE](NOTICE).
