@@ -1,0 +1,24 @@
+cross-variety-sentiment-sarcasm
+Copyright 2026 Mohammad Abdalaziz
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Gemma
+-----
+The sarcasm classifiers in this project are LoRA adapters for google/gemma-2-2b
+and are Model Derivatives of Gemma.
+
+Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms
+
+Anyone using the adapters must accept those terms and is bound by the use
+restrictions in Section 3.2 of them.
+
+Third-party models and data (not included in this repository)
+-------------------------------------------------------------
+- roberta-base (FacebookAI/roberta-base), released with fairseq under the MIT
+  License - https://github.com/facebookresearch/fairseq
+- BESSTIE benchmark: Srirag, Joshi, Painter and Kanojia, "BESSTIE: A Benchmark
+  for Sentiment and Sarcasm Classification for Varieties of English",
+  Findings of ACL 2025, doi:10.18653/v1/2025.findings-acl.441. Released under
+  CC BY 4.0 - https://huggingface.co/datasets/unswnlporg/BESSTIE
+  This project uses the surrey-nlp/BESSTIE-CW-26 version of the data.
